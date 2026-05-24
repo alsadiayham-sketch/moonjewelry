@@ -10,10 +10,10 @@
         .confirmation-page { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 40px 20px; }
         .confirmation-card { background: var(--card); border: 1px solid var(--border); border-radius: 28px; padding: 40px; max-width: 680px; width: 100%; box-shadow: var(--shadow); text-align: center; animation: confirmSlideIn 0.6s ease; }
         @keyframes confirmSlideIn { from { opacity: 0; transform: translateY(24px) scale(0.97); } to { opacity: 1; transform: translateY(0) scale(1); } }
-        .success-icon { width: 78px; height: 78px; margin: 0 auto 18px; border-radius: 50%; background: rgba(226,194,117,0.12); color: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 2.2rem; font-weight: 900; }
+        .success-icon { width: 78px; height: 78px; margin: 0 auto 18px; border-radius: 50%; background: rgba(139,107,50,0.1); color: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 2.2rem; font-weight: 900; }
         .confirmation-card h1 { font-size: 1.95rem; margin-bottom: 6px; }
         .confirmation-card .order-id { color: var(--text-light); margin-bottom: 24px; }
-        .order-details { text-align: right; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); border-radius: 20px; padding: 20px; margin: 20px 0; }
+        .order-details { text-align: right; background: var(--bg-soft); border: 1px solid var(--border); border-radius: 20px; padding: 20px; margin: 20px 0; }
         .order-details h3 { margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.06); }
         .order-item { display: flex; justify-content: space-between; gap: 12px; align-items: center; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
         .order-item:last-child { border-bottom: none; }
@@ -29,7 +29,7 @@
         .confirmation-actions { margin-top: 25px; display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
         .confirmation-actions a { padding: 14px 24px; border-radius: 16px; font-family: inherit; font-weight: 800; text-decoration: none; transition: var(--transition); }
         .btn-whatsapp-confirm { background: linear-gradient(135deg, #25d366, #5cff8a); color: #07311a; }
-        .btn-continue { background: linear-gradient(135deg, var(--primary), var(--accent)); color: #241607; }
+        .btn-continue { background: linear-gradient(135deg, var(--primary), var(--accent)); color: #fff; }
         .confirmation-actions a:hover { transform: translateY(-2px); }
         .confetti { position: fixed; inset: 0; pointer-events: none; z-index: 100; overflow: hidden; }
         .confetti-piece { position: absolute; width: 10px; height: 10px; border-radius: 50%; animation: confettiFall 3s ease-in forwards; }
