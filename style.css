@@ -58,7 +58,7 @@ body.has-banner .mobile-menu { top: 114px; }
 .search-item-info h4 { font-size: 0.95rem; margin-bottom: 3px; }
 .search-item-info span { color: var(--muted); font-size: 0.82rem; }
 
-.hero { min-height: 100vh; position: relative; display: flex; align-items: center; justify-content: center; text-align: center; padding: 96px 20px 48px; background: linear-gradient(rgba(10,10,18,0.46), rgba(10,10,18,0.7)), url('https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=1600&h=900&fit=crop') center/cover no-repeat; }
+.hero { min-height: 100vh; position: relative; display: flex; align-items: center; justify-content: center; text-align: center; padding: 96px 20px 48px; background: linear-gradient(rgba(10,10,18,0.46), rgba(10,10,18,0.7)), url('hero-bg.jpg') center/cover no-repeat; }
 .hero-overlay { position: absolute; inset: 0; background: radial-gradient(circle at center, rgba(201, 169, 110, 0.05), transparent 55%); }
 .hero-content { position: relative; z-index: 2; max-width: 900px; }
 .hero-logo-shell { width: 160px; height: 160px; margin: 0 auto 24px; padding: 12px; border-radius: 36px; background: rgba(15, 15, 26, 0.6); border: 1px solid rgba(226, 194, 117, 0.25); box-shadow: 0 20px 40px rgba(0,0,0,0.35); }
