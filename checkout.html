@@ -357,6 +357,23 @@
                 button.textContent = originalText;
             }
         }
+
+        // Reset button state when user returns from WhatsApp
+        document.addEventListener('visibilitychange', function() {
+            if (!document.hidden) {
+                var btn = document.getElementById('confirmOrderBtn');
+                if (btn && btn.disabled) {
+                    // Order was already saved, redirect to confirmation
+                    var lastOrder = localStorage.getItem('moon_last_order');
+                    if (lastOrder) {
+                        window.location.href = 'confirmation.html';
+                    } else {
+                        btn.disabled = false;
+                        btn.textContent = 'تأكيد الطلب عبر واتساب';
+                    }
+                }
+            }
+        });
     </script>
 </body>
 </html>
