@@ -223,28 +223,46 @@ function updateBulkBar() {
     }
 }
 
+function deselectAll() {
+    var checkboxes = document.querySelectorAll('.product-select');
+    for (var i = 0; i < checkboxes.length; i++) {
+        checkboxes[i].checked = false;
+    }
+    var master = document.querySelector('#selectAllProducts');
+    if (master) master.checked = false;
+    updateBulkBar();
+}
+
 async function bulkChangeStatus() {
     var ids = getSelectedProductIds();
     var status = document.getElementById('bulkStatusSelect').value;
     if (!ids.length || !status) return;
+    setAdminLoading(true);
     var batch = db.batch();
     ids.forEach(function (id) {
         batch.update(db.collection('products').doc(String(id)), { status: status });
     });
     await batch.commit();
+    setAdminLoading(false);
     document.getElementById('bulkStatusSelect').value = '';
+    deselectAll();
+    setAdminStatus('تم تحديث حالة ' + ids.length + ' منتج بنجاح.', 'success');
 }
 
 async function bulkApplyDiscount() {
     var ids = getSelectedProductIds();
     var discount = parseInt(document.getElementById('bulkDiscountInput').value, 10);
     if (!ids.length || isNaN(discount) || discount < 0 || discount > 99) return;
+    setAdminLoading(true);
     var batch = db.batch();
     ids.forEach(function (id) {
         batch.update(db.collection('products').doc(String(id)), { discount: discount });
     });
     await batch.commit();
+    setAdminLoading(false);
     document.getElementById('bulkDiscountInput').value = '';
+    deselectAll();
+    setAdminStatus('تم تطبيق خصم ' + discount + '% على ' + ids.length + ' منتج.', 'success');
 }
 
 async function bulkDeleteProducts() {
