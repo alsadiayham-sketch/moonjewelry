@@ -30,7 +30,7 @@ const DEFAULT_DISCOUNTS = [
 ];
 
 const DEFAULT_SITE_SETTINGS = {
-    whatsappNumber: '0599000000',
+    whatsappNumber: '972569236758',
     heroSubtitle: 'ساعات، حقائب، واكسسوارات فاخرة بإطلالة ليلية أنيقة',
     aboutText: 'Moon Jewelry & More وجهتكِ لتنسيق إطلالة راقية تجمع بين الساعات الفاخرة والحقائب الراقية والاكسسوارات اليومية.\n\nننتقي لكِ قطعاً أصلية بتفاصيل ذهبية أنيقة، مع خدمة سريعة واهتمام بكل طلب من أول رسالة حتى التسليم.',
     instagramLink: 'https://www.instagram.com/moon.jewelryandmore'
